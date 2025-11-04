@@ -10,11 +10,21 @@ This repository stores Google Apps Script files written in plain JavaScript. The
 
 ```
 GCalender2CWReport/
-├── src/
-│   └── Code.gs          # Main GAS script file
-├── README.md            # This file
-├── LICENSE              # MIT License
-└── .gitignore          # Git ignore rules
+├── DEPLOYMENT.md
+├── LICENSE
+├── README.md
+├── ai
+│   ├── Context.md
+│   └── Prompt.md
+└── src
+    ├── Code.gs
+    ├── Develop.gs
+    ├── ExportJSON.gs
+    ├── GenerateText.gs
+    ├── TestDataExpected.gs
+    ├── TestDataJSON.gs
+    └── Tests.gs
+
 ```
 
 ## Deployment Instructions
@@ -28,7 +38,6 @@ Since this is a Google Apps Script project, deployment is done by copying and pa
    - Click on "New Project"
 
 2. **Copy the Script Files**
-   - Open the `src/Code.gs` file from this repository
    - Copy the entire contents
 
 3. **Paste into GAS Editor**
@@ -50,41 +59,13 @@ Since this is a Google Apps Script project, deployment is done by copying and pa
 
 ## Usage
 
-The main script provides the following functions:
-
-- `main()` - Main entry point for the script
-- `getCalendarEvents(calendarId, startDate, endDate)` - Fetches calendar events within a date range
-- `generateReport(events)` - Generates a formatted report from calendar events
-
 ## Development
-
-### Adding New Features
-
-1. Create or modify `.gs` files in the `src/` directory
-2. Follow Google Apps Script conventions for JavaScript
-3. Test your changes in the Google Apps Script editor
-4. Commit your changes to this repository
-
-### Best Practices
-
-- Keep functions focused and modular
-- Add JSDoc comments for better documentation
-- Use clear and descriptive function names
-- Handle errors appropriately with try-catch blocks
-- Log important information using `Logger.log()`
 
 ## Requirements
 
 - A Google account
 - Access to Google Apps Script (script.google.com)
 - Permissions to access Google Calendar data
-
-## Contributing
-
-Feel free to contribute improvements or additional scripts. Make sure to:
-- Follow the existing code style
-- Add appropriate comments and documentation
-- Test your changes before committing
 
 ## License
 
